@@ -5,7 +5,7 @@
 }
 
 Body {
-    background-image: url(../frontend/img/background-header.jpg);
+    background-image: url(img/background-header.jpg);
     background-size: cover;
     padding: none;
 }
