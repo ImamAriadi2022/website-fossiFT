@@ -1,5 +1,7 @@
 :root {
     --font-primary: 'Almarai', sans-serif;
+    --font-color: #333;
+    --bg-color: #1126F4;
 }
 
 Body {
@@ -59,6 +61,8 @@ a.header {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 .nav{
     background-color:#fff;
@@ -75,4 +79,125 @@ a.header {
     font-size: 1rem;
     margin: 0 1rem;
     padding: 2rem;
+}
+
+
+main {
+    background-color: #fff;
+}
+
+h2 {
+    color: #333;
+    font-family: var(--font-primary);
+    padding-top: 60px;
+    margin: 0px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-text{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.deskripsi-fossi {
+    padding: 0rem 3rem 3rem 3rem;
+    font-size: 21px;
+    color: var(--font-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about-img{
+    width: 500px;  
+}
+
+
+.visi{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* style untuk dewan syuro */
+
+.team-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.team-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000;
+}
+
+.team-subtitle {
+    font-size: 1.2em;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.toggle-container {
+    margin-bottom: 20px;
+}
+
+#toggle-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: var(--bg-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle-btn:hover {
+    background-color: var(--bg-color);
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-photo {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-role {
+    font-weight: bold;
+    color: var(--bg-color);
+    margin-top: 5px;
+}
+
+.year-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }

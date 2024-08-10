@@ -22,19 +22,94 @@
             <h1>Ahlan Wasahlan di WEB resmi Fossi FT UNILA</h1>
             <h4>Generasi Rabbani Pelopor Perubahan</h4>
             <button class="menjelajah">
-                <a class="header" href="#hero-section">Meri Menjelajah</a>
+                <a class="header" href="#hero-section">Mari Menjelajah</a>
             </button>
         </div>
     </header>
 
-    <nav class="navbar">
-        <ul class="nav">
-            <li><a class="link-nav" href="#hero-section">Beranda</a></li>
-            <li><a class="link-nav" href="#about-section">Visi Misi</a></li>
-            <li><a class="link-nav" href="#event-section">Dewan Syuro</a></li>
-            <li><a class="link-nav" href="#contact-section">Berita</a></li>
-        </ul>
-    </nav>
+    <main>
+        <nav class="navbar">
+            <ul class="nav">
+                <li><a class="link-nav" href="#hero-section">Beranda</a></li>
+                <li><a class="link-nav" href="#about-section">Visi Misi</a></li>
+                <li><a class="link-nav" href="#DS-section">Dewan Syuro</a></li>
+                <li><a class="link-nav" href="#">Berita</a></li>
+                <li><a class="link-nav" href="#">Dakwah</a></li>
+                <li><a class="link-nav" href="#">STAFF & AMF</a></li>
+            </ul>
+        </nav>
+        <section class="hero-section" id="hero-section">
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>APA ITU FOSSI FT UNILA?</h2>
+                    <p class="deskripsi-fossi">Fossi FT Unila atau singkatan dari forum silaturahmi studi Islama
+                        fakultas teknik Universitas Lampung merupakan unit kegiatan mahasiswa tingkat
+                        fakultas yang berfokus untuk studi, silaturahmi dan kajian mengenai agama Islam
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about-section">
+            <h2 class="visi">
+                VISI DAN MISI
+            </h2>
+            <div class="about">
+                <img class="about-img" src="../frontend/img/logo-fossi.png" alt="">
+                <article>
+                    <p>Visi Fossi FT Unila adalah menjadi wadah silaturahmi, studi dan kajian Islam yang
+                        berbasis keilmuan dan keagamaan yang berlandaskan Al-Qur'an dan As-Sunnah
+                    </p>
+                    <p>Misi Fossi FT Unila adalah
+                        <ol>
+                            <li>Menjalin silaturahmi antar mahasiswa fakultas teknik Universitas Lampung</li>
+                            <li>Menyelenggarakan kegiatan studi dan kajian Islam</li>
+                            <li>Menyelenggarakan kegiatan dakwah dan tarbiyah</li>
+                        </ol>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2 class="team-title">TEAM</h2>
+            <p class="team-subtitle">Struktur Kepengurusan FOSSI-FT Universitas Lampung</p>
+            
+            <div class="toggle-container">
+                <button id="toggle-btn" onclick="toggleTeam()">Tampilkan Pengurus 2024</button>
+            </div>
+    
+            <div id="team-2023" class="team-container">
+                <h3 class="year-title">Pengurus 2023</h3>
+                <div class="team-card">
+                    <img src="../frontend/img/ds2023/rafli.jpg" alt="Rafly Albin Farid" class="team-photo">
+                    <h3>Rafly Albin Farid</h3>
+                    <p class="team-role">KETUA UMUM</p>
+                </div>
+                <div class="team-card">
+                    <img src="../frontend/img/ds2023/zahra.jpg" alt="Zahra Hanifah Amrul" class="team-photo">
+                    <h3>Zahra Hanifah Amrul</h3>
+                    <p class="team-role">WAKIL KETUA UMUM</p>
+                </div>
+                <!-- Add more team members for 2023 -->
+            </div>
+    
+            <div id="team-2024" class="team-container" style="display: none;">
+                <h3 class="year-title">Pengurus 2024</h3>
+                <div class="team-card">
+                    <img src="../frontend/img/ds2024/salman.jpg" alt="New Leader 2024" class="team-photo">
+                    <h3>Salman Alfarisi</h3>
+                    <p class="team-role">KETUA UMUM</p>
+                </div>
+                <div class="team-card">
+                    <img src="../frontend/img/ds2024/isma.jpg" alt="New Vice Leader 2024" class="team-photo">
+                    <h3>Nadifah Isma Aulia</h3>
+                    <p class="team-role">WAKIL KETUA UMUM</p>
+                </div>
+                <!-- Add more team members for 2024 -->
+            </div>
+        </section>
+    </main>
 
 
     <!-- ini buat js -->

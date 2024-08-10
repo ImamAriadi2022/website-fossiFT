@@ -1,16 +1,15 @@
-// Impor modul http
-const http = require('http');
+function toggleTeam() {
+    var team2023 = document.getElementById("team-2023");
+    var team2024 = document.getElementById("team-2024");
+    var toggleBtn = document.getElementById("toggle-btn");
 
-// Buat server
-const server = http.createServer((req, res) => {
-    // Atur header respon
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    // Tulis "Hello, World!" sebagai respon
-    res.end('Hello, World!\n');
-});
-
-// Tentukan port server
-const port = process.env.PORT || 3000;
-server.listen(port, () => {
-    console.log(`Server berjalan di http://localhost:${port}`);
-});
+    if (team2023.style.display === "none") {
+        team2023.style.display = "flex";
+        team2024.style.display = "none";
+        toggleBtn.textContent = "Tampilkan Pengurus 2024";
+    } else {
+        team2023.style.display = "none";
+        team2024.style.display = "flex";
+        toggleBtn.textContent = "Tampilkan Pengurus 2023";
+    }
+}
