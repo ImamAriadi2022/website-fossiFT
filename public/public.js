@@ -30,3 +30,11 @@ function fixNavbar() {
 
 // Panggil fungsi fixNavbar setiap kali pengguna menggulir halaman
 window.addEventListener('scroll', fixNavbar);
+
+
+
+// ini buat footer
+document.getElementById("footer-link").addEventListener("click", function(event) {
+    event.preventDefault();
+    alert("Programmer: Imam Ariadi\nEmail: imam@example.com\nPhone: +62 812 3456 7890");
+});

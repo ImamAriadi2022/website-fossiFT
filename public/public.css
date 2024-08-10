@@ -4,47 +4,50 @@
     --bg-color: #1126F4;
 }
 
-Body {
+body {
     background-image: url(img/background-header.jpg);
     background-size: cover;
-    padding: none;
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
     font-family: var(--font-primary);
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #fff;
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 h4 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: #fff;
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .head {
-    padding: 5rem;
+    padding: 4rem 1rem;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     flex-direction: column;
 }
 
 .logo {
-    width: 300px;
+    width: 80%;
+    max-width: 200px;
     margin-bottom: 2rem;
 }
 
 .menjelajah {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     background-color: #1126F4;
-    width: 14rem;
+    width: 100%;
+    max-width: 12rem;
     height: 2rem;
     border-radius: 10px;
 }
@@ -53,11 +56,11 @@ a.header {
     text-decoration: none;
     color: #fff;
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 
 .navbar {
-    background-color:#fff;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +68,6 @@ a.header {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
     padding: 10px 0;
     text-align: center;
-    position: relative; /* awalnya relative */
     width: 100%;
     z-index: 1000;
     transition: top 0.3s;
@@ -76,29 +78,29 @@ a.header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #fff; /* Ubah warna atau tetap sama */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
-.nav{
-    background-color:#fff;
+.nav {
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
 }
 
-.link-nav{
+.link-nav {
     text-decoration: none;
     color: #000;
     font-family: var(--font-primary);
-    font-size: 1rem;
-    margin: 0 1rem;
-    padding: 2rem;
+    font-size: 0.875rem;
+    margin: 0 0.75rem;
+    padding: 1rem 0;
 }
-
 
 main {
     background-color: #fff;
@@ -107,8 +109,9 @@ main {
 h2 {
     color: #333;
     font-family: var(--font-primary);
-    padding-top: 60px;
-    margin: 0px;
+    padding-top: 40px;
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 .hero {
@@ -116,63 +119,64 @@ h2 {
     justify-content: center;
 }
 
-.hero-text{
+.hero-text {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
 .deskripsi-fossi {
-    padding: 0rem 3rem 3rem 3rem;
-    font-size: 21px;
+    padding: 0 1rem 2rem 1rem;
+    font-size: 18px;
     color: var(--font-color);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-p{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 li {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.about-img{
-    width: 500px;  
+.about-img {
+    width: 100%;
+    max-width: 300px;
 }
 
-
-.visi{
+.visi {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-bottom: 3rem;
-    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
-.about{
+.about {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column; /* Default for mobile */
+    align-items: center;
 }
 
-
-/* style untuk dewan syuro */
-
+/* Style for Dewan Syuro */
 .team-section {
     text-align: center;
-    padding: 50px 0;
+    padding: 30px 1rem;
 }
 
 .team-title {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #000;
 }
 
 .team-subtitle {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #888;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .toggle-container {
@@ -204,26 +208,167 @@ li {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    padding: 20px;
+    width: 100%;
+    max-width: 150px;
+    padding: 15px;
     text-align: center;
 }
 
 .team-photo {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .team-role {
     font-weight: bold;
     color: var(--bg-color);
     margin-top: 5px;
+    font-size: 0.875rem;
 }
 
 .year-title {
     width: 100%;
     text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.fotbar {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 2rem 1rem;
+}
+
+.fattah {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo-vektor {
+    width: 40px;
+    height: 40px;
+    margin: 2rem 0;
+}
+
+.desk-fotbar {
+    padding: 1.5rem;
+}
+
+.desk {
+    font-family: var(--font-primary);
+    color: #333;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.lupa {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 2rem;
+    padding-left: 1rem;
+}
+
+.fattah1,
+.fattah2,
+.fattah3,
+.fattah4 {
+    display: flex;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 60%;
+        max-width: 250px;
+    }
+
+    .about-img {
+        width: 80%;
+        max-width: 350px;
+    }
+
+    .fotbar {
+        width: 80%;
+        max-width: 350px;
+    }
+
+    .team-card {
+        max-width: 175px;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .head {
+        padding: 7rem 1rem;
+    }
+
+    .menjelajah {
+        width: 16rem;
+        height: 2.5rem;
+    }
+
+    .about {
+        flex-direction: row; /* Change to row on desktop */
+    }
+
+    .about-img {
+        max-width: 400px;
+    }
+
+    .fotbar {
+        max-width: 400px;
+    }
+
+    .team-card {
+        max-width: 200px;
+    }
+}
+
+footer {
+    background-color: #1126F4;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
