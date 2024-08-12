@@ -24,19 +24,25 @@
         </div>
     </header>
 
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img class="logo" src="img/logo-fossi.png" alt="Logo FOSSI">
+        </div>
+        <button class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav" id="nav-menu">
+            <li><a class="link-nav" href="#hero-section">Beranda</a></li>
+            <li><a class="link-nav" href="#about-section">Visi Misi</a></li>
+            <li><a class="link-nav" href="#DS-section">Dewan Syuro</a></li>
+            <li><a class="link-nav" href="berita/berita.html">Berita</a></li>
+            <li><a class="link-nav" href="pengurus/pengurus.html">STAFF & AMF</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <nav class="navbar">
-            <ul class="nav">
-                <li><a class="link-nav" href="#hero-section">Beranda</a></li>
-                <li><a class="link-nav" href="#about-section">Visi Misi</a></li>
-                <li><a class="link-nav" href="#DS-section">Dewan Syuro</a></li>
-                <li><a class="link-nav" href="berita/berita.html">Berita</a></li>
-                <li><a class="link-nav" href="pengurus/pengurus.html">STAFF & AMF</a></li>
-            </ul>
-        </nav>
-
-
-
         <section class="hero-section" id="hero-section">
             <div class="hero">
                 <div class="hero-text">
@@ -78,37 +84,52 @@
                 <button id="toggle-btn" onclick="toggleTeam()">Tampilkan Pengurus 2024</button>
             </div>
     
-            <div id="team-2023" class="team-container">
+            <div id="team-2023" class="team-container carousel">
                 <h3 class="year-title">DEWAN SYURO 2023</h3>
                 <div class="team-card">
                     <img src="img/ds2023/rafli.jpg" alt="Rafly Albin Farid" class="team-photo">
                     <h3>Rafly Albin Farid</h3>
                     <p class="team-role">KETUA UMUM</p>
+                    <div class="social-media">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
                 </div>
                 <div class="team-card">
                     <img src="img/ds2023/zahra.jpg" alt="Zahra Hanifah Amrul" class="team-photo">
                     <h3>Zahra Hanifah Amrul</h3>
                     <p class="team-role">WAKIL KETUA UMUM</p>
+                    <div class="social-media">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
                 </div>
                 <!-- Add more team members for 2023 -->
             </div>
     
-            <div id="team-2024" class="team-container" style="display: none;">
+            <div id="team-2024" class="team-container carousel" style="display: none;">
                 <h3 class="year-title">DEWAN SYURO 2024</h3>
                 <div class="team-card">
-                    <img src="img/ds2024/salman.jpg" alt="New Leader 2024" class="team-photo">
+                    <img src="img/ds2024/salman.jpg" alt="Salman Alfarisi" class="team-photo">
                     <h3>Salman Alfarisi</h3>
                     <p class="team-role">KETUA UMUM</p>
+                    <div class="social-media">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
                 </div>
                 <div class="team-card">
-                    <img src="img/ds2024/isma.jpg" alt="New Vice Leader 2024" class="team-photo">
+                    <img src="img/ds2024/isma.jpg" alt="Nadifah Isma Aulia" class="team-photo">
                     <h3>Nadifah Isma Aulia</h3>
                     <p class="team-role">WAKIL KETUA UMUM</p>
+                    <div class="social-media">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
                 </div>
                 <!-- Add more team members for 2024 -->
             </div>
         </section>
-
 
         <section class="movie">
             <h2 class="fattah">KABINET FATTAH</h2>
@@ -148,11 +169,9 @@
         </section>
     </main>
 
-
     <footer>
-        <p>Copytight &copy;2024 <a href="#" id="footer-link">2024 Developer by @ImamAriadi</a> | <a href="login-admin/index.html">Masuk sebagai Admin</a></p>
+        <p>&copy;copyright FOSSI-FT 2024 <br> <a href="#" id="footer-link">Developer by @ImamAriadi</a> | <a href="login-admin/index.html">Masuk sebagai Admin</a></p>
     </footer>
-
 
     <!-- ini buat js -->
     <script src="public.js"></script>
