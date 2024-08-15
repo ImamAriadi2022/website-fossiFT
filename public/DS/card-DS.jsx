@@ -195,7 +195,7 @@ const styles = `
         }
 
         h4 {
-            font-size: 18px;
+            font-size: 14px;
         }
 
         p {
