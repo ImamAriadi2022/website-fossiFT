@@ -57,7 +57,7 @@ function PopUp({ onClose, onToggleTeam }) {
 // Komponen utama App
 function App() {
     const [isPopUpVisible, setIsPopUpVisible] = useState(false);
-    const [teamYear, setTeamYear] = useState('2023'); // default to 2023
+    const [teamYear, setTeamYear] = useState('2024');
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
     const [cards2023, setCards2023] = useState([]);
     const [cards2024, setCards2024] = useState([]);
@@ -66,35 +66,18 @@ function App() {
         const fetchCards = async () => {
             const data2023 = [
                 { id: 1, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 2, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                // More data...
+                { id: 1, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
+                { id: 1, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
+                { id: 1, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
+                { id: 1, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
+                { id: 1, name: 'Salman Alfarisi', role: 'KETUA UMUM', img: 'https://via.placeholder.com/150' },
+                // ... more data ...
             ];
             const data2024 = [
                 { id: 3, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                { id: 4, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
-                // More data...
+                { id: 3, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
+                { id: 3, name: 'Nadifah Isma Aulia', role: 'WAKIL KETUA UMUM', img: 'https://via.placeholder.com/150' },
+                // ... more data ...
             ];
             setCards2023(data2023);
             setCards2024(data2024);
@@ -199,6 +182,12 @@ const styles = `
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            width: calc(50% - 40px);
+        }
     }
 
     header {
