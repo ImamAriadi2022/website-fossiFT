@@ -186,7 +186,20 @@ const styles = `
 
     @media (max-width: 768px) {
         .card {
-            width: calc(30% - 40px);
+            width: calc(40% - 10px);
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size:10px;
         }
     }
 
