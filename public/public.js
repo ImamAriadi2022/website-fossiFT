@@ -72,18 +72,31 @@ teamCards.forEach(card => {
 });
 
 // Navbar fixed
-const navbar = document.querySelector('.navbar');
+// Mendapatkan elemen header dan navbar
+const header = document.querySelector('header');
+const navbar = document.querySelector('.fix-js');
+
 function fixNavbar() {
-    if (window.scrollY > navbar.offsetTop) {
+    // Menambahkan class fixed jika scroll telah melewati header
+    if (window.scrollY > header.offsetHeight) {
         navbar.classList.add('fixed');
     } else {
         navbar.classList.remove('fixed');
     }
 }
+
+// Memanggil fungsi fixNavbar setiap kali pengguna scroll
 window.addEventListener('scroll', fixNavbar);
+
+
 
 // Footer alert
 document.getElementById("footer-link").addEventListener("click", function(event) {
     event.preventDefault();
     alert("Programmer: Imam Ariadi\nEmail: imamariadi775@gmail.com\nIG: @Imam_Ariadi33");
 });
+
+
+
+
+

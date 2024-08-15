@@ -1,0 +1,110 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling untuk elemen body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Styling untuk header */
+header {
+    color: rgb(32, 30, 30);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h3 {
+    margin-bottom: 10px;
+}
+
+header button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+header button:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling untuk card */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Gaya gambar di dalam card */
+.card img {
+    border-radius: 10%;
+    width: 120px; /* Menyesuaikan ukuran gambar */
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Styling untuk card-list */
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styling untuk card-list di tampilan mobile */
+@media (max-width: 768px) {
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Styling untuk team container */
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Styling untuk carousel */
+.carousel {
+    padding: 20px;
+}
+
+/* Styling untuk slider (misalnya Slick Slider) */
+.slick-slide {
+    display: flex !important;
+    justify-content: center;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 24px;
+    color: #007bff;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    color: #0056b3;
+}
