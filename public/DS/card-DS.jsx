@@ -186,7 +186,7 @@ const styles = `
 
     @media (max-width: 768px) {
         .card {
-            width: calc(50% - 40px);
+            width: calc(30% - 40px);
         }
     }
 
