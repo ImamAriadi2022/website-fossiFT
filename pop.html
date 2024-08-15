@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Pop-Up</title>
+  <style>
+    .App {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .open-popup-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .execute-btn, .close-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .popup-content {
+        width: 400px;
+      }
+
+      .execute-btn, .close-btn {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .popup-content {
+        width: 300px;
+      }
+
+      .execute-btn, .close-btn {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .popup-content {
+        width: 90%;
+      }
+
+      .execute-btn, .close-btn {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="pop"></div>
+  <div id="pop-up"></div>
+
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+
+    const { useState } = React;
+
+    // Komponen PopUp
+    function PopUp({ onClose, onExecute }) {
+      return ReactDOM.createPortal(
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <button className="execute-btn" onClick={onExecute}>
+              Execute Function
+            </button>
+            <button className="close-btn" onClick={onClose}>
+              Close
+            </button>
+          </div>
+        </div>,
+        document.getElementById('pop-up') // Render ke elemen dengan id "pop-up"
+      );
+    }
+
+    // Komponen utama
+    function App() {
+      const [isPopUpVisible, setIsPopUpVisible] = useState(false);
+
+      const handleOpenPopUp = () => {
+        setIsPopUpVisible(true);
+      };
+
+      const handleClosePopUp = () => {
+        setIsPopUpVisible(false);
+      };
+
+      const handleExecuteFunction = () => {
+        alert('Function Executed!');
+        setIsPopUpVisible(false);
+      };
+
+      return (
+        <div className="App">
+          <button className="open-popup-btn" onClick={handleOpenPopUp}>
+            Open Pop-Up
+          </button>
+          {isPopUpVisible && (
+            <PopUp onClose={handleClosePopUp} onExecute={handleExecuteFunction} />
+          )}
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('pop'));
+
+  </script>
+</body>
+</html>
